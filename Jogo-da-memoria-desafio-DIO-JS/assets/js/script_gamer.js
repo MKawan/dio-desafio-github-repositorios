@@ -2,7 +2,6 @@ const cards = document.querySelectorAll(".card");
 let hasFlippedCard = false;
 let firstCard, secondCard;
 let lockBoard = false;
-var scrore = 0;
 
 //função de virar os cards
 function flipCard(){
@@ -25,8 +24,6 @@ function flipCard(){
 function checkForMatch(){
     if(firstCard.dataset.card === secondCard.dataset.card){
         disabledCards();
-        score += 10;
-        document.getElementById('score').innerHTML = score;
         return;
     }
     unflipCards();
